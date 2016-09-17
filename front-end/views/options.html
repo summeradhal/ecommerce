@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+
+	.games img{
+	height: 80%;
+	width: 40%;
+
+	
+	}
+
+	.games{
+		border: : 2px solid black;
+	}
+
+
+	</style>
+</head>
+<body ng-controller="optionsCtrl">
+
+<div class="container">
+	<div class="row">
+		<div class="games">
+
+			<div class="row">
+				<form ng-submit="addToCart" id="login-form">
+				<div class="col-sm-4">
+					<img src="images/fallout4.jpg">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF FALL OUT -->
+			</form>
+			
+			<!-- BEGINNING OF WITCHER -->
+		<form ng-submit="addToCart" id="login-form">
+				<div class="col-sm-4">
+					<img src="images/witcher3.jpg">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF WITCHER -->
+				</form>
+			</div><!-- END OF  ROW -->
+			<!-- BEGINNING OF INSIDE -->
+			<div class="row">
+			<form ng-submit="addToCart" id="login-form">
+				<div class="col-sm-4">
+					<img src="images/inside.png">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF INSIDE -->
+				</form>
+			
+			<!-- BEGINNING OF DARK SOULS -->
+			
+				<div class="col-sm-4">
+				<form ng-submit="addToCart" id="cart-form">
+					<img src="images/darksouls.jpg">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF  DARKSOULS -->
+				</form>
+			</div><!-- END OF ROW -->
+			<!-- Beginning of DOOM  Row-->
+			<div class="row">
+			<form ng-submit="addToCart" id="cart-form">
+				<div class="col-sm-4">
+					<img src="images/doomCover.jpg">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF DOOM -->
+				</form>
+			
+			<!-- Beginning of COD  -->
+			<div class="row">
+			<form ng-submit="addToCart" id="cart-form">
+				<div class="col-sm-4">
+					<img src="images/cod.jpg">
+					<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+				</div><!-- END OF COD-->
+				</form>
+			</div><!-- END OF ROW -->
+
+		</div><!-- END OF GAMES  -->
+	</div><!-- END OF ROW -->
+</div><!-- END OF CONTAINER -->
+
+</body>
+</html>
+
+

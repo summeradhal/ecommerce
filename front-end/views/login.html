@@ -1,33 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	body{
+background-color: #ECEBE4;
+	}
+.container{
+	
+	text-align: center;
+	background-color: #fff;
+	width: 20%;
+	height: 40%;
+}
+.form-group{
+	padding-bottom: 3%;
+	text-align: center;
+
+}
+
+h1{
+	padding-bottom: 3%;
+
+}
+
+
+	
+</style>
+
+
+</head>
+<body ng-controller="loginCtrl">
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<h1> Registration</h1>
+			<h1> Log-in</h1>
 		</div>
 
+	
 		<div class="col-sm-12">
 			<form ng-submit="login()" id="login-form">
-						<!-- USERNAME -->
-							<div class="form-group">
-								<div class="col-sm-4">
-								<label>
-									username
-								</label>
-									<input type="text" ng-model="username" placeholder="Enter username" minlength="4" maxlength="50" classs="form-control">
+				<!-- USERNAME -->
+				<div class="row">
+					<div class="form-group">
 
-								</div>
-							</div>
+						<div class="col-sm-4">
+							<label>
+								Username
+							</label>
+							<input type="text" ng-model="username" placeholder="Enter username" minlength="4" maxlength="50" class="form-control">
 
-							<!-- PASSWORD -->
-							<div class="form-group">
+						</div>
+					</div>
+				</div>
+
+	<div class="row">
+					
+						<!-- PASSWORD -->
+				<div class="form-group">
 								
-								<div class="col-sm-4">
-								<label>
-									Password
-								</label>
-									<input type="password" ng-model="password" placeholder="Enter password" minlength="4" maxlength="50" classs="form-control">
-								</div>
-							</div>
+					<div class="col-sm-4">
+						<label>
+							Password
+						</label>
+						<input type="password" ng-model="password" placeholder="Enter password" minlength="4" maxlength="50" class="form-control">
+					</div>
+				</div>
+		</div>
+				<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
 			</form>
 		</div>
 	</div>
 </div>
+</body>
+</html>
+
