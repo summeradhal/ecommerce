@@ -6,22 +6,23 @@ ecommerceApp.controller('mainController',function($scope,$http,$location,$cookie
 $scope.test="hello";
 
 
-// $http.get(apiPath+'/getUserData?token='+$cookies.get('token'))
-// 	.then(function successCallback(response){
-// 		//response.data.xxx=whatever res.json was in express
-// 		if(response.data.failure=='badToken'){
-// 			$location.path='/login' //goodbye
-// 		}else if(esponse.data.failure=='noToken'){
-// 		$location.path='/login' //no token, token is bad expired or fake, goodbye
-// 		}else{
-// 			//the token is good. response.data will have their stuff in it
+$http.get(apiPath+'/getUserData'+'?token='+$cookies.get('token'))
+	.then(function successCallback(response){
+		//response.data.xxx=whatever res.json was in express
+		if(response.data.failure=='badToken'){
+			$location.path='/login'; //goodbye
+		}else if(response.data.failure=='noToken'){
+			$location.path='/login'; //no token, token is bad expired or fake, goodbye
+		}else{
+			//the token is good. response.data will have their stuff in it
+			console.log(token);
+			$scope.token=response.data.token;
+			console.log(response);
 
-// 	}
+	}
 
 
-// 	})function errorCallback(response){
-
-// 		}
+	})
 });
 
 //Set up routes using routes module
@@ -43,10 +44,15 @@ ecommerceApp.config(function($routeProvider){
 		templateUrl:'views/options.html',
 		controller:'optionsCtrl'
 	})
-	.when('/payment',{
+	.when('/cart',{
 		templateUrl:'views/payment.html',
 		controller:'paymentCtrl'
 	})
+	.when('/account',{
+		templateUrl:'views/account.html',
+		controller:'accountCtrl'
+	})
+	
 	.otherwise({
 		redirectTo:'/'
 	})

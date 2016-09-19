@@ -88,8 +88,6 @@ router.get('getUserData',function(req,res,next){
 			}else{
 				res.json({
 				username:document.username,
-				grind:document.grind,
-				frequency:document.frequency
 				token:document.token
 				})//document.username. break it down so it doesnt send everything
 			}

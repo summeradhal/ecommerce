@@ -5,94 +5,129 @@
 
 	<style>
 
-	.games img{
-	height: 80%;
-	width: 40%;
+	.thumbnail img{
+	height: 400px;
+	width: 350px;
 
 	
 	}
 
-	.games{
-		border: : 2px solid black;
+	.thumbnail{
+		text-align: center;
 	}
+
+	.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
 
 
 	</style>
 </head>
 <body ng-controller="optionsCtrl">
 
-<div class="container">
-	<div class="row">
-		<div class="games">
 
-			<div class="row">
-				<form ng-submit="addToCart" id="login-form">
-				<div class="col-sm-4">
-					<img src="images/fallout4.jpg">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF FALL OUT -->
-			</form>
-			
-			<!-- BEGINNING OF WITCHER -->
-		<form ng-submit="addToCart" id="login-form">
-				<div class="col-sm-4">
-					<img src="images/witcher3.jpg">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF WITCHER -->
-				</form>
-			</div><!-- END OF  ROW -->
-			<!-- BEGINNING OF INSIDE -->
-			<div class="row">
-			<form ng-submit="addToCart" id="login-form">
-				<div class="col-sm-4">
-					<img src="images/inside.png">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF INSIDE -->
-				</form>
-			
-			<!-- BEGINNING OF DARK SOULS -->
-			
-				<div class="col-sm-4">
-				<form ng-submit="addToCart" id="cart-form">
-					<img src="images/darksouls.jpg">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF  DARKSOULS -->
-				</form>
-			</div><!-- END OF ROW -->
-			<!-- Beginning of DOOM  Row-->
-			<div class="row">
-			<form ng-submit="addToCart" id="cart-form">
-				<div class="col-sm-4">
-					<img src="images/doomCover.jpg">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF DOOM -->
-				</form>
-			
-			<!-- Beginning of COD  -->
-			<div class="row">
-			<form ng-submit="addToCart" id="cart-form">
-				<div class="col-sm-4">
-					<img src="images/cod.jpg">
-					<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
-				</div>
-				</div><!-- END OF COD-->
-				</form>
-			</div><!-- END OF ROW -->
+<form ng-click="addCart()" id="login-form">
 
-		</div><!-- END OF GAMES  -->
-	</div><!-- END OF ROW -->
-</div><!-- END OF CONTAINER -->
+<div class="row no-gutter ">
+<!-- Begin row 1 -->
+<div class="row no-gutter">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/fallout4.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/witcher3.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div> <!-- END ROW 1-->
+
+
+<!-- CLEARFIX -->
+ <div class="clearfix visible-xs-block"></div>
+
+<!-- Begin row 2 -->
+<div class="row no-gutter ">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/cod.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/inside.png" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div> <!-- END ROW 2-->
+
+<!-- CLEARFIX -->
+ <div class="clearfix visible-xs-block"></div>
+
+<!-- Begin row 3 -->
+<div class="row no-gutter ">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/doomCover.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/darksouls.jpg" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Add</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- END ROW 3 -->
+
+
+<!-- CLEARFIX -->
+ <div class="clearfix visible-xs-block"></div>
+
+</div>
+</form> <!-- END FORM -->
 
 </body>
 </html>

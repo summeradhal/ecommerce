@@ -11,10 +11,15 @@ var apiPath="http://localhost:3000";
 
 		}).then(function successCallback(response){
 			console.log(response);
-			if(Response.data.message=="added"){
-				$cookies.put('token',response.data.token);
+			if(response.data.message=="added"){
+				
 				$cookies.put('username',$scope.username);
 				$location.path('/options')
+				var expDate = new Date();
+  					expDate.setDate(expDate.getTime() + (30 * 60000));
+					// get a random token back from the API and store it inside cookies
+					// make the cookie expire tomorrow
+					$cookies.put('token', response.data.token, {'expires': expDate});
 			}
 					
 

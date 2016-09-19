@@ -2,11 +2,14 @@ ecommerceApp.controller('optionsCtrl',function($scope,$http,$location,$cookies){
 var apiPath="http://localhost:3000";
 
 
-// $scope.addToCart = function(idOfThingClickedOn){
-//     var oldCart = $cookies.get('cart');
-//     var newCart = oldCart + ',' + idOfThingClickedOn;
-//     $cookies.put('cart', newcart);
-// }
+$scope.addToCart = function(idOfThingClickedOn){
+	console.log(idOfThingClickedOn);
+    var oldCart = $cookies.get('cart');
+    var newCart = oldCart + ',' + idOfThingClickedOn;
+    $cookies.put('cart', newcart);
+
+
+}
 
 // $scope.getCart = function(){
 //     var cart = $cookies.get('cart');

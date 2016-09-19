@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/optionsCtrl.js"></script>
 	<script type="text/javascript" src="js/logoutCtrl.js"></script>
 	<script type="text/javascript" src="js/deliveryCtrl.js"></script>
-	<script src="https://checkout.stripe.com/checkout.js"></script>
+<!-- 	<script src="https://checkout.stripe.com/checkout.js"></script> -->
 
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -82,13 +82,14 @@ body{
 		                <li ng-hide="loggedIn">
 		                    <a ng-href="#/logout">Log Out</a>
 		                </li>  
-		                <li ng-hide="loggedIn">
-		               
+		                <li ng-hide="loggedIn" ng-controller="loginCtrl">
+
+		               {{username.username}}
 		                </li>   
-		                <li ng-show="loggedIn">
+		                <li ng-hide="loggedIn">
 		                    <a ng-href="#/account">Account</a>
 		                </li>
-		                <li ng-show="loggedIn">
+		                <li ng-hide="loggedIn">
 		                    <a ng-href="#/cart">Cart</a>
 		                </li>                 
 					</ul>
