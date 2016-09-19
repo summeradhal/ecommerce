@@ -1,6 +1,6 @@
 var ecommerceApp=angular.module('ecommerceApp',['ngCookies','ngRoute']);
 ecommerceApp.controller('mainController',function($scope,$http,$location,$cookies){
-	var apiPath="http://localhost:3000";
+	var apiPath="http://summeradhal.com:3000";
 
 	
 $scope.test="hello";
